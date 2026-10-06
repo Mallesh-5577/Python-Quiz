@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Python Quiz</h1>
+        <div class="container">
+            <div class="box">
+                <div class="que">
+                    <h2>Question</h2>
+                    <p id="question"></p>
+                </div>
+
+                <div class="ans">
+                    <h2>Options</h2>
+                    <p class="option"></p>
+                    <p class="option"></p>
+                    <p class="option"></p>
+                    <p class="option"></p>
+                </div>
+
+                <div class="btns">
+                    <button id="prev">Pre</button>
+                    <button id="submit" disabled>Submit</button>
+                    <button id="next">Next</button>
+                </div>
+            </div>
+            <div class="box-2">
+                <h2>Analysis</h2>
+                <div class="analysis-content" id="analysisContent" hidden>
+                    <div class="score-ring" id="scoreRing" aria-label="Quiz score">
+                        <span id="scorePercent">0%</span>
+                    </div>
+                    <p class="score-summary"><strong id="correctCount">0</strong> correct out of <strong
+                            id="totalCount">0</strong> questions</p>
+                    <div class="progress-track" aria-label="Quiz progress">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="final-result" id="finalResult">
+                        <h3>Final Result</h3>
+                        <p id="result"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="results-box" id="resultsBox" hidden>
+                <h2>Answer Review</h2>
+                <div class="results-list" id="resultsList"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

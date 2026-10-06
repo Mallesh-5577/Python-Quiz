@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: calc(100vh - 48px);
+}
+
+.main > h1 {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 32px;
+    padding: 0 18px 14px;
+    color: #222;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    text-align: center;
+    background: linear-gradient(135deg, #c52fd1 0%, #f5576c 55%, #ff8a65 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 5px rgb(0 0 0 / 18%));
+}
+
+.main > h1::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 0;
+    left: 18px;
+    height: 5px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f093fb, #f5576c, #ff8a65);
+    -webkit-text-fill-color: initial;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(20px, 4vw, 32px);
+    text-align: center;
+    width: min(1500px, 100%);
+    margin: 0 auto;
+}
+
+.box,
+.box-2,
+.results-box {
+    border-radius: 20px;
+    min-height: clamp(500px, calc(100vh - 150px), 760px);
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #222;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.results-box {
+    text-align: left;
+}
+
+.results-box h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.results-box[hidden] {
+    display: none;
+}
+
+.results-list {
+    display: grid;
+    gap: 8px;
+    max-height: 410px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.review-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 9px 10px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    background: rgb(255 255 255 / 70%);
+    font-size: 0.85rem;
+}
+
+.review-item span {
+    line-height: 1.35;
+}
+
+.review-item.correct {
+    border-left: 6px solid #20833a;
+}
+
+.review-item.wrong {
+    border-left: 6px solid #b52b2b;
+}
+
+.review-item.unanswered {
+    border-left: 6px solid #777;
+}
+
+.box-2 {
+    text-align: left;
+}
+
+.box-2 h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.score-ring {
+    --score: 0%;
+    display: grid;
+    place-items: center;
+    width: min(190px, 60vw);
+    aspect-ratio: 1;
+    margin: 28px auto 18px;
+    border-radius: 50%;
+    background: conic-gradient(#222 var(--score), rgb(255 255 255 / 65%) 0);
+    position: relative;
+}
+
+.score-ring::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border-radius: inherit;
+    background: #f093fb;
+}
+
+.score-ring span {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: bold;
+}
+
+.score-summary {
+    text-align: center;
+    margin: 0 0 24px;
+}
+
+.progress-track {
+    height: 16px;
+    overflow: hidden;
+    border: 1px solid #222;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 65%);
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #222;
+    transition: width 250ms ease;
+}
+
+.final-result {
+    margin-top: 28px;
+    padding: 16px;
+    border: 1px solid #222;
+    border-radius: 12px;
+    text-align: center;
+    background: rgb(255 255 255 / 65%);
+}
+
+.final-result h3,
+.final-result p {
+    margin: 0;
+}
+
+.final-result p {
+    margin-top: 10px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.final-result.score-perfect {
+    background: #d9f8df;
+    border-color: #20833a;
+}
+
+.final-result.score-better {
+    background: #fff0c2;
+    border-color: #aa7700;
+}
+
+.final-result.score-good {
+    background: #dceeff;
+    border-color: #2475ad;
+}
+
+.final-result.score-practice {
+    background: #ffe0e0;
+    border-color: #b52b2b;
+}
+
+.option.selected {
+    outline: 3px solid #222;
+}
+
+.que {
+    min-height: 100px;
+}
+
+.ans {
+    min-height: 210px;
+    margin-top: 20px;
+}
+
+.option {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background-color: rgb(255 255 255 / 70%);
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 50px;
+}
+
+.btns button {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 18px;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btns button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.analysis-content[hidden] {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 12px;
+    }
+
+    .main {
+        min-height: auto;
+    }
+
+    .main > h1 {
+        margin-bottom: 16px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .box,
+    .box-2,
+    .results-box {
+        flex: 0 0 auto;
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 16px;
+    }
+
+    .box-2 {
+        min-height: 220px;
+    }
+
+    .results-list {
+        max-height: 360px;
+    }
+
+    .que {
+        min-height: 0;
+    }
+
+    .ans {
+        min-height: 0;
+        margin-top: 24px;
+    }
+
+    .btns {
+        margin-top: 28px;
+        gap: 12px;
+    }
+
+    .btns button {
+        flex: 1;
+        padding: 10px 8px;
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+    .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .results-box {
+        grid-column: 1 / -1;
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        padding: 8px;
+    }
+
+    .box,
+    .box-2 {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .btns {
+        gap: 6px;
+    }
+
+    .btns button {
+        padding: 9px 4px;
+    }
+}
