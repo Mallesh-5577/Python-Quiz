@@ -47,6 +47,13 @@ body {
     -webkit-text-fill-color: initial;
 }
 
+.main > h3 {
+    margin: 0 auto 24px;
+    max-width: 1100px;
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.5;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -64,8 +71,15 @@ body {
     min-height: clamp(500px, calc(100vh - 150px), 760px);
     min-width: 0;
     padding: 24px;
+    font-size: 1.05rem;
     border: 1px solid #222;
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.box h2,
+.box-2 h2,
+.results-box h2 {
+    font-size: clamp(1.35rem, 2vw, 1.7rem);
 }
 
 .results-box {
@@ -97,7 +111,7 @@ body {
     border: 1px solid #222;
     border-radius: 8px;
     background: rgb(255 255 255 / 70%);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
 }
 
 .review-item span {
@@ -155,6 +169,7 @@ body {
 .score-summary {
     text-align: center;
     margin: 0 0 24px;
+    font-size: 1.05rem;
 }
 
 .progress-track {
@@ -190,6 +205,7 @@ body {
 .final-result p {
     margin-top: 10px;
     font-weight: bold;
+    font-size: 1.05rem;
     line-height: 1.6;
 }
 
@@ -219,6 +235,11 @@ body {
 
 .que {
     min-height: 100px;
+}
+
+.que p,
+.option {
+    font-size: 1.05rem;
 }
 
 .ans {
@@ -294,6 +315,12 @@ body {
         min-height: 220px;
     }
 
+    .box,
+    .box-2,
+    .results-box {
+        font-size: 1rem;
+    }
+
     .results-list {
         max-height: 360px;
     }
@@ -315,7 +342,7 @@ body {
     .btns button {
         flex: 1;
         padding: 10px 8px;
-        font-size: clamp(0.8rem, 3.5vw, 1rem);
+        font-size: clamp(0.9rem, 3.5vw, 1.05rem);
     }
 }
 
