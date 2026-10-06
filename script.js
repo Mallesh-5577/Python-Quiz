@@ -1,38 +1,16 @@
 const questions = [
-  {"question": "Which function is used to display output in Python?", "options": ["echo()", "print()", "console.log()", "write()"], "answer": 1},
   {"question": "Which keyword is used to define a function?", "options": ["function", "def", "fun", "define"], "answer": 1},
-  {"question": "What is the output of type(5)?", "options": ["<class 'float'>", "<class 'str'>", "<class 'int'>", "<class 'num'>"], "answer": 2},
-  {"question": "Which symbol is used for single-line comments?", "options": ["//", "#", "--", "/* */"], "answer": 1},
-  {"question": "What is the result of 2 ** 3?", "options": ["6", "8", "9", "5"], "answer": 1},
-  {"question": "What is the result of 7 // 2?", "options": ["3.5", "4", "3", "2"], "answer": 2},
-  {"question": "What is the result of 7 % 3?", "options": ["2", "1", "3", "0"], "answer": 1},
-  {"question": "What does len(\"Python\") return?", "options": ["5", "6", "7", "8"], "answer": 1},
   {"question": "Which of these data types is immutable?", "options": ["list", "dict", "set", "tuple"], "answer": 3},
-  {"question": "Which of these creates a list?", "options": ["(1, 2, 3)", "{1, 2, 3}", "[1, 2, 3]", "<1, 2, 3>"], "answer": 2},
-  {"question": "What is the output of \"Hello\"[1]?", "options": ["H", "e", "l", "o"], "answer": 1},
   {"question": "Which method adds an item to the end of a list?", "options": ["add()", "push()", "append()", "insert_end()"], "answer": 2},
-  {"question": "Which of these is a valid variable name?", "options": ["2name", "my-name", "my_name", "my name"], "answer": 2},
   {"question": "What type of value does input() return?", "options": ["int", "str", "float", "bool"], "answer": 1},
-  {"question": "What is the output of bool(0)?", "options": ["True", "False", "0", "None"], "answer": 1},
-  {"question": "What does range(3) produce?", "options": ["1, 2, 3", "0, 1, 2", "0, 1, 2, 3", "1, 2"], "answer": 1},
-  {"question": "Which keyword is used for \"else if\" in Python?", "options": ["elseif", "else if", "elif", "elsif"], "answer": 2},
-  {"question": "What is the output of \"abc\".upper()?", "options": ["ABC", "abc", "Abc", "aBC"], "answer": 0},
-  {"question": "Given d = {'a': 1}, what does d['a'] return?", "options": ["'a'", "1", "None", "Error"], "answer": 1},
-  {"question": "What is the output of [1, 2, 3][-1]?", "options": ["1", "2", "3", "Error"], "answer": 2},
   {"question": "What is the output of \"python\"[1:4]?", "options": ["pyt", "yth", "ytho", "tho"], "answer": 1},
   {"question": "What does len(set([1, 1, 2, 2, 3])) return?", "options": ["5", "3", "2", "1"], "answer": 1},
   {"question": "Which keyword skips the current loop iteration and moves to the next?", "options": ["break", "pass", "continue", "skip"], "answer": 2},
-  {"question": "What does the pass statement do?", "options": ["Exits the loop", "Does nothing", "Raises an error", "Skips the function"], "answer": 1},
   {"question": "What is the output of [x * 2 for x in range(3)]?", "options": ["[0, 2, 4]", "[2, 4, 6]", "[0, 1, 2]", "[1, 2, 3]"], "answer": 0},
-  {"question": "Which keyword is used to import a module?", "options": ["include", "import", "using", "require"], "answer": 1},
   {"question": "Which block always runs, whether or not an exception occurs?", "options": ["else", "finally", "except", "catch"], "answer": 1},
   {"question": "What is the output of print(10 / 2)?", "options": ["5", "5.0", "2", "Error"], "answer": 1},
   {"question": "What does *args allow a function to accept?", "options": ["Keyword arguments only", "Any number of positional arguments", "Exactly two arguments", "Pointer arguments"], "answer": 1},
-  {"question": "If f = lambda x: x + 1, what is f(2)?", "options": ["2", "3", "4", "Error"], "answer": 1},
-  {"question": "Which file mode opens a file for appending?", "options": ["r", "w", "a", "x"], "answer": 2},
-  {"question": "What is the output of \"a,b,c\".split(\",\")?", "options": ["['a', 'b', 'c']", "'abc'", "('a', 'b', 'c')", "['a,b,c']"], "answer": 0},
   {"question": "What does the is operator check?", "options": ["Value equality", "Whether both names refer to the same object", "Data type only", "Membership in a list"], "answer": 1},
-  {"question": "Which method returns all keys of a dictionary d?", "options": ["d.keys()", "d.getkeys()", "d.key()", "keys(d)"], "answer": 0},
   {"question": "Which method is the constructor of a Python class?", "options": ["__init__", "__create__", "constructor", "__start__"], "answer": 0},
   {"question": "What does self refer to inside a class method?", "options": ["The class itself", "The current instance", "The parent class", "The module"], "answer": 1},
   {"question": "Which is the correct syntax for class B inheriting from class A?", "options": ["class B extends A", "class B(A):", "class B : A", "class B inherits A"], "answer": 1},
@@ -50,11 +28,9 @@ const questions = [
   {"question": "Which keyword pauses a coroutine until an awaitable completes?", "options": ["yield", "await", "wait", "pause"], "answer": 1},
   {"question": "What does the nonlocal keyword do?", "options": ["Declares a global variable", "Refers to a variable in an enclosing (non-global) scope", "Makes a variable constant", "Deletes a variable"], "answer": 1},
   {"question": "What is the output of print(bool(\"False\"))?", "options": ["False", "True", "Error", "None"], "answer": 1},
-  {"question": "What is the output of print(3 * \"ab\")?", "options": ["ababab", "aaabbb", "3ab", "Error"], "answer": 0},
   {"question": "a = [1, 2, 3]; b = a; b.append(4). What is print(a)?", "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4]", "Error"], "answer": 1},
   {"question": "What is the output of print(-7 // 2)?", "options": ["-3", "-4", "3", "-3.5"], "answer": 1},
   {"question": "What is the output of print(round(2.5))?", "options": ["3", "2", "2.5", "Error"], "answer": 1},
-  {"question": "What is type((5))?", "options": ["<class 'tuple'>", "<class 'int'>", "<class 'list'>", "<class 'str'>"], "answer": 1},
   {"question": "What is the output of print([] == [], [] is [])?", "options": ["True True", "True False", "False False", "False True"], "answer": 1},
   {"question": "What happens when you run int(\"3.5\")?", "options": ["Returns 3", "Returns 4", "Raises ValueError", "Returns 3.5"], "answer": 2},
   {"question": "What happens with d = {}; d[[1, 2]] = \"x\"?", "options": ["It works", "TypeError: unhashable type: 'list'", "KeyError", "ValueError"], "answer": 1},
@@ -63,19 +39,13 @@ const questions = [
   {"question": "After a, *b = [1, 2, 3], what is b?", "options": ["[2, 3]", "2", "[1, 2]", "Error"], "answer": 0},
   {"question": "x = 10 is global. Function f() prints x and afterwards assigns x = 5. What happens when f() is called?", "options": ["Prints 10", "Prints 5", "UnboundLocalError", "Prints None"], "answer": 2},
   {"question": "What is the output of print(all([]))?", "options": ["False", "True", "None", "Error"], "answer": 1},
-  {"question": "What is the output of print(any([0, \"\", None]))?", "options": ["True", "False", "None", "Error"], "answer": 1},
-  {"question": "What is the output of print(len({1: 'a', 1: 'b'}))?", "options": ["2", "1", "0", "Error"], "answer": 1},
-  {"question": "What is the output of print(type(lambda: 0))?", "options": ["<class 'lambda'>", "<class 'function'>", "<class 'method'>", "<class 'callable'>"], "answer": 1},
-  {"question": "What is the output of print(divmod(17, 5))?", "options": ["(3, 2)", "(2, 3)", "[3, 2]", "3.4"], "answer": 0},
   {"question": "What is the output of print(isinstance(True, int))?", "options": ["False", "True", "Error", "None"], "answer": 1},
   {"question": "What does if __name__ == \"__main__\": check?", "options": ["The file is run directly, not imported", "The file is imported", "The Python version", "Whether the module exists"], "answer": 0},
-  {"question": "What is the output of print(sum([[1], [2]], []))?", "options": ["[1, 2]", "[[1], [2]]", "3", "TypeError"], "answer": 0},
   {"question": "What does the walrus operator := do?", "options": ["Compares two values", "Assigns a value inside an expression", "Unpacks a list", "Defines a lambda"], "answer": 1},
   {"question": "What is the difference between list.sort() and sorted()?", "options": ["sort() returns a new list; sorted() sorts in place", "sort() sorts in place and returns None; sorted() returns a new list", "Both return new lists", "Both modify the list in place"], "answer": 1},
-  {"question": "After for x in range(3): pass, what is x?", "options": ["2", "3", "NameError", "None"], "answer": 0},
   {"question": "a = [[0]] * 3; a[0][0] = 1. What is print(a)?", "options": ["[[1], [0], [0]]", "[[1], [1], [1]]", "[[0], [0], [0]]", "Error"], "answer": 1},
   {"question": "funcs = [lambda: i for i in range(3)]. What does funcs[0]() return?", "options": ["0", "2", "3", "Error"], "answer": 1},
-  {"question": "def f(): try: return 1 / finally: return 2. What does f() return?", "options": ["1", "2", "None", "Error"], "answer": 1},
+  {"question": "def f():\n    try:\n        return 1 / 0\n    finally:\n        return 2\n\nWhat does f() return?", "options": ["1", "2", "None", "Error"], "answer": 1},
   {"question": "How does Python pass arguments to functions?", "options": ["By value", "By reference", "By object reference (assignment)", "By pointer"], "answer": 2},
   {"question": "What is the output of print(3 > 2 > 2)?", "options": ["True", "False", "Error", "None"], "answer": 1},
   {"question": "What does functools.lru_cache do?", "options": ["Limits memory usage", "Caches function results by arguments", "Locks threads", "Logs function calls"], "answer": 1}
@@ -172,12 +142,12 @@ function showFinalResult() {
     0
   );
   const percentage = Math.round((correct / questions.length) * 100);
-  const rating = correct >= 61
+  const rating = correct >= 41
     ? {
       title: "Perfect! 🎉",
       message: "Congratulations! Excellent work."
     }
-    : correct >= 41
+    : correct >= 30
       ? {
         title: "Better! 👍",
         message: "Practice more to become perfect."
